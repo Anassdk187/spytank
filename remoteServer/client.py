@@ -8,8 +8,8 @@ PORT=1111
 print("z : avancer\nq : gauche\ns : reculer\nd : droite\ne/r : led\na : stop\nc : exit")
 print("entre une lettre pour piloter le robot comme dans la description")
 
-
-while True:
+continuer = True
+while continuer:
     
     socket = network.newClientSocket()
     socket.connect((ADDRESS,PORT))
@@ -21,3 +21,5 @@ while True:
     reponse = socket.recv(4096)
     print(reponse)
     
+    if lettre == "c":
+        continuer = False

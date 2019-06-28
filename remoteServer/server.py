@@ -6,9 +6,9 @@ PORT=1111
 socket = network.newServerSocket()
 socket.bind((ADDRESS,PORT))
 
-continuer : True 
+continuer = True 
 while continuer :
-    
+
     socket.listen(10)
     print("en ecoute...")
 
